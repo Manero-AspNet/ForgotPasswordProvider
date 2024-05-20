@@ -25,7 +25,7 @@ public class ForgotPasswordService(ILogger<ForgotPasswordService> logger, DataCo
         }
         catch (Exception ex)
         {
-            _logger.LogError($"ERROR : ForgotPassword.UnpackForgotPasswordRequest() :: {ex.Message}");
+            _logger.LogError($"ERROR : ForgotPasswordService.UnpackForgotPasswordRequest() :: {ex.Message}");
         }
         return null!;
     }
@@ -41,7 +41,7 @@ public class ForgotPasswordService(ILogger<ForgotPasswordService> logger, DataCo
         }
         catch (Exception ex)
         {
-            _logger.LogError($"ERROR : ForgotPassword.GeneratedCode() :: {ex.Message}");
+            _logger.LogError($"ERROR : ForgotPasswordService.GeneratedCode() :: {ex.Message}");
         }
         return null!;
     }
@@ -68,7 +68,7 @@ public class ForgotPasswordService(ILogger<ForgotPasswordService> logger, DataCo
         }
         catch (Exception ex)
         {
-            _logger.LogError($"ERROR : ForgotPassword.SaveForgotPasswordRequest() :: {ex.Message}");
+            _logger.LogError($"ERROR : ForgotPasswordService.SaveForgotPasswordRequest() :: {ex.Message}");
         }
         return false;
     }
@@ -118,7 +118,7 @@ public class ForgotPasswordService(ILogger<ForgotPasswordService> logger, DataCo
         }
         catch (Exception ex)
         {
-            _logger.LogError($"ERROR : ForgotPassword.GenerateEmailRequest() :: {ex.Message}");
+            _logger.LogError($"ERROR : ForgotPasswordService.GenerateEmailRequest() :: {ex.Message}");
         }
         return null!;
     }
@@ -136,7 +136,7 @@ public class ForgotPasswordService(ILogger<ForgotPasswordService> logger, DataCo
         }
         catch (Exception ex)
         {
-            _logger.LogError($"ERROR : ForgotPassword.GenerateServiceBusMessage() :: {ex.Message}");
+            _logger.LogError($"ERROR : ForgotPasswordService.GenerateServiceBusMessage() :: {ex.Message}");
         }
         return null!;
     }

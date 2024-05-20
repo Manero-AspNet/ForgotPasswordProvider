@@ -18,6 +18,7 @@ var host = new HostBuilder()
         services.AddSingleton<ServiceBusClient>(new ServiceBusClient(Environment.GetEnvironmentVariable("ServiceBus")));
         services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
         services.AddScoped<IForgotPasswordCleanerService, ForgotPasswordCleanerService>();
+        services.AddScoped<IValidateForgotPasswordCodeService, ValidateForgotPasswordCodeService>();
 
         services.AddIdentity<UserEntitiy, IdentityRole>(x =>
         {

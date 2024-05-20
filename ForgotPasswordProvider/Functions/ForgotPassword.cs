@@ -19,7 +19,7 @@ public class ForgotPassword(ILogger<ForgotPassword> logger, ServiceBusClient ser
 
     [Function("ForgotPassword")]
     [ServiceBusOutput("email_request", Connection="ServiceBus")]
-    public async Task Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
+    public async Task Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
     {
         try
         {

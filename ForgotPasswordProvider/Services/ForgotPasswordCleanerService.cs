@@ -19,7 +19,7 @@ public class ForgotPasswordCleanerService(ILogger<ForgotPasswordCleanerService> 
         }
         catch (Exception ex)
         {
-            _logger.LogError($"ERROR : ForgotPasswordCleaner.RemoveExpiredRecordsAsync() :: {ex.Message}");
+            _logger.LogError($"ERROR : ForgotPasswordCleanerService.RemoveExpiredRecordsAsync() :: {ex.Message}");
         }
     }
 }
