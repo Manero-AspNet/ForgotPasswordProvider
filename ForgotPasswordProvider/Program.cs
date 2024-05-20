@@ -1,6 +1,7 @@
 using Azure.Messaging.ServiceBus;
 using ForgotPasswordProvider.Data.Contexts;
 using ForgotPasswordProvider.Data.Entities;
+using ForgotPasswordProvider.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,8 @@ var host = new HostBuilder()
         services.ConfigureFunctionsApplicationInsights();
         services.AddDbContext<DataContext>(x => x.UseSqlServer(Environment.GetEnvironmentVariable("SqlServer")));
         services.AddSingleton<ServiceBusClient>(new ServiceBusClient(Environment.GetEnvironmentVariable("ServiceBus")));
+        services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
+        services.AddScoped<IForgotPasswordCleanerService, ForgotPasswordCleanerService>();
 
         services.AddIdentity<UserEntitiy, IdentityRole>(x =>
         {
