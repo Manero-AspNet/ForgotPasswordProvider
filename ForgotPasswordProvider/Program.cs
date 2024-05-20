@@ -19,6 +19,7 @@ var host = new HostBuilder()
         services.AddScoped<IForgotPasswordService, ForgotPasswordService>();
         services.AddScoped<IForgotPasswordCleanerService, ForgotPasswordCleanerService>();
         services.AddScoped<IValidateForgotPasswordCodeService, ValidateForgotPasswordCodeService>();
+        services.AddScoped<IResetForgotPasswordService, ResetForgotPasswordService>();
 
         services.AddIdentity<UserEntitiy, IdentityRole>(x =>
         {

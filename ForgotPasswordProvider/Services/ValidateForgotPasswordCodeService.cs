@@ -31,7 +31,7 @@ public class ValidateForgotPasswordCodeService(ILogger<ValidateForgotPasswordCod
         }
         catch (Exception ex)
         {
-            _logger.LogError($"ERROR : ValidateForgotPasswordCode.UnpackValidateRequestAsync() :: {ex.Message}");
+            _logger.LogError($"ERROR : ValidateForgotPasswordCodeService.UnpackValidateRequestAsync() :: {ex.Message}");
         }
         return null!;
     }
@@ -51,7 +51,7 @@ public class ValidateForgotPasswordCodeService(ILogger<ValidateForgotPasswordCod
         }
         catch (Exception ex)
         {
-            _logger.LogError($"ERROR : ValidateForgotPasswordCode.ValidateCodeAsync() :: {ex.Message}");
+            _logger.LogError($"ERROR : ValidateForgotPasswordCodeService.ValidateCodeAsync() :: {ex.Message}");
         }
         return false;
     }

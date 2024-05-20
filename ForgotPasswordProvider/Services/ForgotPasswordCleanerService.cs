@@ -13,7 +13,7 @@ public class ForgotPasswordCleanerService(ILogger<ForgotPasswordCleanerService> 
     {
         try
         {
-            var expired = await _context.ForgotPasswordRequests.Where(x => x.ExpirationDate >= DateTime.Now).ToListAsync();
+            var expired = await _context.ForgotPasswordRequests.Where(x => x.ExpirationDate <= DateTime.Now).ToListAsync();
             _context.RemoveRange(expired);
             await _context.SaveChangesAsync();
         }
