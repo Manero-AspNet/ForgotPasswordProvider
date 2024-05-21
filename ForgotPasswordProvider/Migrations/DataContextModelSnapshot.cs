@@ -36,7 +36,7 @@ namespace ForgotPasswordProvider.Migrations
 
                     b.HasKey("Email");
 
-                    b.ToTable("ForgotPasswordRequests");
+                    b.ToTable("ForgotPasswordRequests", (string)null);
                 });
 
             modelBuilder.Entity("ForgotPasswordProvider.Data.Entities.UserEntitiy", b =>
@@ -129,7 +129,7 @@ namespace ForgotPasswordProvider.Migrations
 
                     b.HasKey("Email");
 
-                    b.ToTable("VerificationRequests");
+                    b.ToTable("VerificationRequests", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
